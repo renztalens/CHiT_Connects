@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.container h2 {
+    color: #1877f2;
+}
+
+.option {
+    padding: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items:baseline; 
+}
+
+select{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+textarea, input[type="file"], input[type="text"], input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 97.3%;
+}
+
+button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    background-color: #1877f2;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #165db2;
+}
+
+.inbox {
+    margin-top: 20px;
+}
+
+.inbox ul {
+    list-style: none;
+    padding: 0;
+}
+
+.inbox li {
+    background-color: #f0f2f5;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.inbox li strong {
+    color: #333;
+}
+
+.inbox li img {
+    max-width: 100px;
+    max-height: 100px;
+    width: auto;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.inbox li span {
+    color: #555;
+    font-size: 0.9em;
+    display: block;
+    margin-top: 5px;
+}
+
+.register-link {
+    margin-top: 20px;
+}
+
+.register-link a {
+    color: #1877f2;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
