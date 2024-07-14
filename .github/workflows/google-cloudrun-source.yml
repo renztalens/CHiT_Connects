@@ -52,8 +52,8 @@ on:
 
 env:
   PROJECT_ID: CHiT_Connects # TODO: update Google Cloud project id
-  SERVICE: YOUR_SERVICE_NAME # TODO: update Cloud Run service name
-  REGION: YOUR_SERVICE_REGION # TODO: update Cloud Run service region
+  SERVICE: chit-connects # TODO: update Cloud Run service name
+  REGION: asia-southeast1 # TODO: update Cloud Run service region
 
 jobs:
   deploy:
@@ -65,7 +65,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       # Using credentials JSON for authentication
       - name: Google Auth
