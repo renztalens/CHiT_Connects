@@ -1,0 +1,37 @@
+body {
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.t-container {
+    z-index: 1000;
+    position: fixed;
+    background-color: #383838;
+    height: 100px;
+    width: 100%;
+    top: 0;
+    left: 100;
+    transition: all 1s ease;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.udmlogo {
+    background: linear-gradient(to right, #8c742a, #bb8525);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    font-size: 50px;
+    font-weight: 500;
+    margin-right: 20px;
+}
+
+.title {
+    font-size: 75px;
+    font-weight: 500;
+    margin-left: 0px;
+}
