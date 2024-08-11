@@ -1,18 +1,20 @@
-# Use the official PHP image with Apache
-FROM php:7.4-apache
+# Use the official PHP 8.0 image as the base
+FROM php:8.0-apache
 
-# Set the working directory to /var/www/html
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    libzip-dev \
+    unzip \
+    && docker-php-ext-install zip pdo_mysql
+
+# Enable Apache rewrite module
+RUN a2enmod rewrite
+
+# Set the document root to Laravel's public directory
+ENV APACHE_DOCUMENT_ROOT /var/www/html/public
+
+# Copy the application files to the container
+COPY . /var/www/html
+
+# Set the working directory
 WORKDIR /var/www/html
-
-# Copy the current directory contents into the container at /var/www/html
-COPY . /var/www/html/
-
-# Ensure the container listens on port 8080 (required for Cloud Run)
-EXPOSE 8080
-
-# Change the Apache listening port to 8080
-RUN sed -i 's/Listen 80/Listen 8080/' /etc/apache2/ports.conf \
-    && sed -i 's/:80>/:8080>/' /etc/apache2/sites-available/000-default.conf
-
-# Set the default command to run the Apache server in the foreground
-CMD ["apache2-foreground"]
